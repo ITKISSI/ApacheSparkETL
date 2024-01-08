@@ -27,7 +27,7 @@ public class SparkEtlApplication {
 					.appName("SparkEtlApplication")
 					.config("spark.master", "local[*]")
 					.getOrCreate();
-
+			//------------ Change this line --------------------------------------
 			String csvFilePath = "D:\\EHEI\\5EME_ANNEE\\NoSQL\\sparkETL\\src\\main\\resources\\data\\Employees.csv";
 			Dataset<Row> rawData = spark.read()
 					.option("header", "true")  // Assuming the first row is a header
